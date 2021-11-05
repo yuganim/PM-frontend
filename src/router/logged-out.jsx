@@ -15,6 +15,10 @@ export const LoggedOut = () => {
 
   // 자바스크립트의 이벤트 작동방식! 을 알아봅시다.
 
+  const join = () => {
+    console.log(joinInput); // ,<<<<<-???
+  };
+
   return (
     <>
       <Header />
@@ -43,7 +47,9 @@ export const LoggedOut = () => {
             setJoinInput({ ...joinInput, password: target.value });
           }}
         />
-        {/*<button type={}>Join</button>*/}
+        <button type="button" onClick={join}>
+          Join
+        </button>
       </form>
     </>
   );
